@@ -7,9 +7,9 @@ const {scraper}=require("./scraper/scraperamzon");
 //here i called the database connection
 mongo.connect();
 dotenv.config();
-app.use(cors());
-const app=express();
 
+const app=express();
+app.use(cors());
 app.use(express.json());
 app.use("/",(req,res,next)=>{
     next();

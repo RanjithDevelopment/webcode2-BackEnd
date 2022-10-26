@@ -3,12 +3,13 @@ const cors =require('cors');
 const amazonrouter=require('./Routers/amazonrouter');
 const mongo=require("./connect");
 const dotenv=require("dotenv");
+const {scraper}=require("./scraper/scraperamzon");
 //here i called the database connection
 mongo.connect();
 dotenv.config();
 app.use(cors());
 const app=express();
-const {scraper}=require("./scraper/scraperamzon");
+
 app.use(express.json());
 app.use("/",(req,res,next)=>{
     next();

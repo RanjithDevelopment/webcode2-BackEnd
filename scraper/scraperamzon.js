@@ -1,4 +1,4 @@
- const axois=require("axios");
+ const Axios=require("axios");
  const _=require("lodash");
  const cheerio=require("cheerio");
  const mongo =require("../connect")
@@ -6,7 +6,7 @@
 
 async function scraper(){
     try{
-const res=await axois.get("https://www.amazon.in/s?k=iphone+11&i=electronics&crid=292GD773RBFNX&sprefix=%2Celectronics%2C479&ref=nb_sb_ss_recent_1_0recent");
+const res=await Axios.get("https://www.amazon.in/s?k=iphone+11&i=electronics&crid=292GD773RBFNX&sprefix=%2Celectronics%2C479&ref=nb_sb_ss_recent_1_0recent");
     const $ = await cheerio.load(res.data);
                   
     $('.s-asin').each((i,el)=> {

@@ -18,7 +18,7 @@ const res=await Axios.get("https://www.amazon.in/s?k=iphone+11&i=electronics&cri
         const image = $(el).find('.s-image').attr('src');
         const link = 'https://www.amazon.in'+$(el).find('.a-link-normal').attr('href');
         const datas = {productId:id,brand,name,price,rating,image,link,type:"amazon"};
-    
+
     create(datas);
        
     });
